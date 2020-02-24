@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane minHeight="626.0" minWidth="845.0" prefHeight="626.0" prefWidth="845.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="UI.SolverConroller">
+  <center>
+    <BorderPane fx:id="graphPane" prefHeight="200.0" prefWidth="200.0" />
+  </center>
+  <left>
+    <Pane prefHeight="626.0" prefWidth="309.0">
+      <children>
+        <TableView fx:id="ptsTable" editable="true" focusTraversable="true" layoutX="17.0" layoutY="27.0" prefHeight="200.0" prefWidth="150.0">
+          <columns>
+            <TableColumn prefWidth="75.0" text="X" fx:id="xPts" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="75.0" text="Y" fx:id="yPts" />
+          </columns>
+        </TableView>
+        <Button fx:id="addPtBtn" layoutX="181.0" layoutY="114.0" mnemonicParsing="false" onAction="#addPtClick" prefHeight="26.951171875" prefWidth="114.0" text="Add point">
+          <font>
+            <Font size="15.0" fx:id="x2" />
+          </font>
+        </Button>
+        <TextField fx:id="xAdd" layoutX="181.0" layoutY="42.0" prefWidth="114.0" promptText="X" />
+        <TextField fx:id="yAdd" layoutX="181.0" layoutY="77.0" prefWidth="114.0" promptText="Y" />
+        <Button id="addPtBtn" font="$x2" layoutX="181.0" layoutY="163.0" mnemonicParsing="false" onAction="#delPtClick" prefHeight="26.951171875" prefWidth="114.0" text="Delete point" />
+      </children>
+    </Pane>
+  </left>
+</BorderPane>
