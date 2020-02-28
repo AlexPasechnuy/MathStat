@@ -17,6 +17,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.util.converter.DoubleStringConverter;
 
 import java.net.URL;
+import java.text.DecimalFormat;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
@@ -120,9 +121,11 @@ public class Controller implements Initializable {
         }
         solver = new Solver(xs, ys);
 
-        corCoef.setText(solver.getCorelCoef() + "");
-        deterCoef.setText(solver.getDeterCoef() + "");
-        regrLine.setText(solver.getRegrParams()[0] + " + " + solver.getRegrParams()[1] + " * x");
+        DecimalFormat df = new DecimalFormat("#.###");
+        corCoef.setText(df.format(solver.getCorelCoef()) + "");
+        deterCoef.setText(df.format(solver.getDeterCoef()) + "");
+        regrLine.setText(df.format(solver.getRegrParams()[0]) + " + "
+                + df.format(solver.getRegrParams()[1]) + " * x");
     }
 
     private void constructGraphs(){
