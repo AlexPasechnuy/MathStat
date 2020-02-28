@@ -1,3 +1,5 @@
+import javafx.fxml.FXML;
+
 import java.lang.reflect.Array;
 import java.util.Arrays;
 
@@ -32,6 +34,7 @@ public class Solver {
         Arrays.copyOf(this.yi, this.yi.length + 1);
         this.xi[this.xi.length - 1] = x;
         this.yi[this.yi.length - 1] = y;
+        solve();
     }
 
     public Solver(double[] xi, double[] yi) {
@@ -79,6 +82,6 @@ public class Solver {
     }
 
     private void deterCoefInit(){
-        squaredR = Math.pow((xySum)/(xi.length * sx * sy),2);
+    squaredR = Math.pow((xySum)/(xi.length * sx * sy),2);
     }
 }
