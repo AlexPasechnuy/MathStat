@@ -3,16 +3,41 @@
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.*?>
 
 <BorderPane minHeight="626.0" minWidth="845.0" prefHeight="626.0" prefWidth="845.0" stylesheets="style.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="Lab2.Controller">
   <center>
-    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lab 2">
-      <font>
-        <Font size="40.0" />
-      </font>
-    </Text>
+    <BorderPane fx:id="graphPane" prefHeight="626.0" prefWidth="550.0" />
   </center>
+  <left>
+    <Pane prefHeight="626.0" prefWidth="279.0">
+      <children>
+        <Button fx:id="addPtBtn" layoutX="116.0" layoutY="87.0" mnemonicParsing="false" onAction="#addElemClick" prefHeight="26.951171875" prefWidth="140.0" text="Add element">
+          <font>
+            <Font size="15.0" fx:id="x2" />
+          </font>
+        </Button>
+        <TextField fx:id="addElem" layoutX="129.0" layoutY="42.0" prefHeight="28.28125" prefWidth="114.0" promptText="element" />
+        <Button id="addPtBtn" font="$x2" layoutX="116.0" layoutY="136.0" mnemonicParsing="false" onAction="#delElemClick" prefHeight="26.951171875" prefWidth="140.0" text="Delete element" />
+        <Button layoutX="154.0" layoutY="189.0" mnemonicParsing="false" onAction="#solveClick" text="Solve">
+          <font>
+            <Font size="16.0" fx:id="x1" />
+          </font>
+        </Button>
+        <MenuBar layoutX="0.0" layoutY="0.0">
+          <menus>
+            <Menu mnemonicParsing="false" text="Change lab">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#toLab1" text="Lab 1" fx:id="lab2" />
+                <MenuItem mnemonicParsing="false" onAction="#toLab3" text="Lab 3" fx:id="lab3" />
+                <MenuItem mnemonicParsing="false" onAction="#toLab4" text="Lab 4" fx:id="lab4" />
+                <MenuItem mnemonicParsing="false" onAction="#toLab5" text="Lab 5" fx:id="lab5" />
+              </items>
+            </Menu>
+          </menus>
+        </MenuBar>
+        <ListView fx:id="elemsListView" layoutX="7.0" layoutY="42.0" prefHeight="570.0" prefWidth="87.99997792968497" />
+      </children>
+    </Pane>
+  </left>
 </BorderPane>

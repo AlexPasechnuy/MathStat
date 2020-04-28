@@ -10,11 +10,12 @@ public class FX extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            BorderPane root = FXMLLoader.load(getClass().getResource("Lab1/Solver.fxml"));
+            BorderPane root = FXMLLoader.load(getClass().getResource("Lab2/Solver.fxml"));
             Scene scene = new Scene(root, 700, 500);
             primaryStage.setScene(scene);
             primaryStage.setTitle("Solver");
             primaryStage.show();
+            primaryStage.setMaximized(true);
         }
         catch(Exception e) {
             e.printStackTrace();

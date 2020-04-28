@@ -186,8 +186,8 @@ public class Controller implements Initializable {
         double xRange = maxX - minX;
         double yRange = maxY - minY;
         try {
-            NumberAxis xAxis = new NumberAxis(minX - xRange / 10, maxX + xRange / 10, xRange / 20);
-            NumberAxis yAxis = new NumberAxis(minY - yRange / 10, maxY + yRange / 10, yRange / 20);
+            NumberAxis xAxis = new NumberAxis(minX - xRange / 10, maxX + xRange / 10, 1);
+            NumberAxis yAxis = new NumberAxis(minY - yRange / 10, maxY + yRange / 10, 1);
             xAxis.setLabel("x");
             yAxis.setLabel("y");
             LineChart<Number, Number> newChart = new LineChart<>(xAxis, yAxis);
@@ -201,7 +201,7 @@ public class Controller implements Initializable {
             for (TabRow row : tableData) {
                 scPlot.getData().add(new XYChart.Data<>(row.getX(), row.getY()));
             }
-            for (double x = minX; x <= maxX; x += xRange / 50) {
+            for (double x = minX  - xRange / 10 ; x <= maxX + xRange / 10; x += xRange / 50) {
                 regrLine.getData().add(new XYChart.Data<>(x, solver.getRegrParams()[0] + solver.getRegrParams()[1] * x));
             }
             newChart.getData().addAll(scPlot, regrLine);
@@ -233,10 +233,7 @@ public class Controller implements Initializable {
 
     private void changeScene(String path, String title){
         try {
-
-            //Close current
             Stage stage = (Stage) graphPane.getScene().getWindow();
-            // do what you have to do
             stage.close();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(path));
             Parent root1 = (Parent) fxmlLoader.load();
@@ -245,6 +242,7 @@ public class Controller implements Initializable {
             stage.setTitle(title);
             stage.setScene(new Scene(root1));
             stage.show();
+            stage.setMaximized(true);
         }catch(Exception ex){
             ex.printStackTrace();
         }
