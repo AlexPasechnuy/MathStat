@@ -41,7 +41,6 @@ public class Controller{
             }
             elems.add(x);
             System.out.println(elems);
-            //listInit();
             elemsListView.setItems(elems);
         } catch (NumberFormatException ex) {
             showError("X or Y are not numbers!");
@@ -55,28 +54,18 @@ public class Controller{
                 throw new NullPointerException();
             }
             elems.remove(pos);
-            //tableInit();
             elemsListView.setItems(elems);
         } catch (NullPointerException ex) {
             showError("Please, choose point to delete!");
         }
     }
 
-//    private void listInit(){
-//        elemsListView.setItems(elems);
-//        xPts.setCellValueFactory(new PropertyValueFactory<>("x"));
-//        xPts.setCellFactory(TextFieldTableCell.forTableColumn(new DoubleStringConverter()));
-//        xPts.setOnEditCommit(t -> updateX(t));
-//        yPts.setCellValueFactory(new PropertyValueFactory<>("y"));
-//        yPts.setCellFactory(TextFieldTableCell.forTableColumn(new DoubleStringConverter()));
-//        yPts.setOnEditCommit(t -> updateY(t));
-//    }
-
     @FXML private void solveClick(javafx.event.ActionEvent event){
-
+        Solver slv = new Solver(elems);
+        slv.solve();
     }
 
-//    private void constructPolygon() {
+    private void constructPolygon() {
 //        getGraphBounds();
 //        double xRange = maxX - minX;
 //        double yRange = maxY - minY;
@@ -108,7 +97,7 @@ public class Controller{
 //            alert.setHeaderText("Error");
 //            alert.showAndWait();
 //        }
-//    }
+    }
 
     @FXML private void toLab1(javafx.event.ActionEvent event){
         changeScene("../Lab1/Solver.fxml", "Lab 1");
