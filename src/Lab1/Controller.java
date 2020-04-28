@@ -1,19 +1,23 @@
+package Lab1;
+
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
-import javafx.scene.control.Alert;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import javafx.util.converter.DoubleStringConverter;
 
 import java.net.URL;
@@ -64,6 +68,10 @@ public class Controller implements Initializable {
     private TextField deterCoef;
     @FXML
     private TextField regrLine;
+    @FXML
+    private Menu changeLab;
+    @FXML
+    private MenuItem lab2, lab3, lab4, lab5;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -153,6 +161,7 @@ public class Controller implements Initializable {
         constructGraphs();
     }
 
+
     private void getGraphBounds() {
         minY = maxY = tableData.get(0).getY();
         minX = maxX = tableData.get(0).getX();
@@ -205,4 +214,40 @@ public class Controller implements Initializable {
             alert.showAndWait();
         }
     }
+
+    @FXML private void toLab2(javafx.event.ActionEvent event){
+        changeScene("../Lab2/Solver.fxml", "Lab 2");
+    }
+
+    @FXML private void toLab3(javafx.event.ActionEvent event){
+        changeScene("../Lab3/Solver.fxml", "Lab 3");
+    }
+
+    @FXML private void toLab4(javafx.event.ActionEvent event){
+        changeScene("../Lab4/Solver.fxml", "Lab 4");
+    }
+
+    @FXML private void toLab5(javafx.event.ActionEvent event){
+        changeScene("../Lab5/Solver.fxml", "Lab 5");
+    }
+
+    private void changeScene(String path, String title){
+        try {
+
+            //Close current
+            Stage stage = (Stage) graphPane.getScene().getWindow();
+            // do what you have to do
+            stage.close();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(path));
+            Parent root1 = (Parent) fxmlLoader.load();
+            stage = new Stage();
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setTitle(title);
+            stage.setScene(new Scene(root1));
+            stage.show();
+        }catch(Exception ex){
+            ex.printStackTrace();
+        }
+    }
+
 }

@@ -1,6 +1,5 @@
-import javafx.fxml.FXML;
+package Lab4;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class Solver {

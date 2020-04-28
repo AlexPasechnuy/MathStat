@@ -1,3 +1,5 @@
+import Lab1.*;
+
 public class Test {
     public static void main(String[] args) {
         double[] xs = {30,28,27,32,33,35};

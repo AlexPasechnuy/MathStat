@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane stylesheets="style.css" minHeight="626.0" minWidth="845.0" prefHeight="626.0" prefWidth="845.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="Controller">
+<BorderPane minHeight="626.0" minWidth="845.0" prefHeight="626.0" prefWidth="845.0" stylesheets="style.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="Lab1.Controller">
   <center>
     <BorderPane fx:id="graphPane" prefHeight="200.0" prefWidth="200.0" />
   </center>
@@ -38,6 +38,18 @@
         <TextField fx:id="corCoef" layoutX="207.0" layoutY="469.0" prefHeight="26.951171875" prefWidth="76.0" />
         <TextField fx:id="deterCoef" layoutX="219.0" layoutY="512.0" prefHeight="26.951171875" prefWidth="76.00009999999747" />
         <TextField fx:id="regrLine" layoutX="151.0" layoutY="555.0" prefHeight="26.951171875" prefWidth="131.99997792968497" />
+        <MenuBar layoutX="0.0" layoutY="0.0">
+          <menus>
+            <Menu mnemonicParsing="false" text="Change lab">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#toLab2" text="Lab 2" fx:id="lab2" />
+                <MenuItem mnemonicParsing="false" onAction="#toLab3" text="Lab 3" fx:id="lab3" />
+                <MenuItem mnemonicParsing="false" onAction="#toLab4" text="Lab 4" fx:id="lab4" />
+                <MenuItem mnemonicParsing="false" onAction="#toLab5" text="Lab 5" fx:id="lab5" />
+              </items>
+            </Menu>
+          </menus>
+        </MenuBar>
       </children>
     </Pane>
   </left>
