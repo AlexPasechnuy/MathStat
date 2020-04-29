@@ -36,6 +36,8 @@ public class Controller{
 
     @FXML private BorderPane graphPane;
 
+    @FXML private TextField min, max, range, mode, median, mean, variance, dev;
+
     @FXML private void addElemClick(javafx.event.ActionEvent event){
         double x = 0;
         try {
@@ -63,8 +65,20 @@ public class Controller{
     }
 
     @FXML private void solveClick(javafx.event.ActionEvent event){
+        if (elems.isEmpty()) {
+            showError("There is nothing to solve!!!");
+            return;
+        }
         slv = new Solver(elems);
         slv.solve();
+        min.setText(Collections.min(slv.getFreq().keySet()).toString());
+        max.setText(Collections.max(slv.getFreq().keySet()).toString());
+        range.setText(String.valueOf(Collections.max(slv.getFreq().keySet()) - Collections.min(slv.getFreq().keySet())));
+        mode.setText(slv.getMode().toString());
+        median.setText(String.valueOf(slv.getMedian()));
+        mean.setText(String.valueOf(slv.getMean()));
+        variance.setText(String.valueOf(slv.getVar()));
+        dev.setText(String.valueOf(slv.getDev()));
         constructPolygon();
     }
 
