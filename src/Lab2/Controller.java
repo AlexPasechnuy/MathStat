@@ -22,10 +22,13 @@ import javafx.util.converter.DoubleStringConverter;
 
 import java.net.URL;
 import java.text.DecimalFormat;
+import java.util.Collections;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 public class Controller{
     ObservableList<Double> elems = FXCollections.observableArrayList();
+    Solver slv;
 
     @FXML private ListView elemsListView;
 
@@ -40,7 +43,6 @@ public class Controller{
                 x = Double.parseDouble(addElem.getText());
             }
             elems.add(x);
-            System.out.println(elems);
             elemsListView.setItems(elems);
         } catch (NumberFormatException ex) {
             showError("X or Y are not numbers!");
@@ -61,42 +63,42 @@ public class Controller{
     }
 
     @FXML private void solveClick(javafx.event.ActionEvent event){
-        Solver slv = new Solver(elems);
+        slv = new Solver(elems);
         slv.solve();
+        constructPolygon();
     }
 
     private void constructPolygon() {
-//        getGraphBounds();
-//        double xRange = maxX - minX;
-//        double yRange = maxY - minY;
-//        try {
-//            NumberAxis xAxis = new NumberAxis(minX - xRange / 10, maxX + xRange / 10, xRange / 20);
-//            NumberAxis yAxis = new NumberAxis(minY - yRange / 10, maxY + yRange / 10, yRange / 20);
-//            xAxis.setLabel("x");
-//            yAxis.setLabel("y");
-//            LineChart<Number, Number> newChart = new LineChart<>(xAxis, yAxis);
-//            newChart.setCreateSymbols(true);
-//            graphPane.getChildren().clear();
-//            graphPane.getChildren().add(newChart);
-//            XYChart.Series<Number, Number> scPlot = new XYChart.Series<>();
-//            scPlot.setName("scatterplot");
-//            XYChart.Series<Number, Number> regrLine = new XYChart.Series<>();
-//            regrLine.setName("regression line");
-//            for (Lab1.Controller.TabRow row : tableData) {
-//                scPlot.getData().add(new XYChart.Data<>(row.getX(), row.getY()));
-//            }
-//            for (double x = minX; x <= maxX; x += xRange / 50) {
-//                regrLine.getData().add(new XYChart.Data<>(x, solver.getRegrParams()[0] + solver.getRegrParams()[1] * x));
-//            }
-//            newChart.getData().addAll(scPlot, regrLine);
-//            graphPane.getChildren().clear();
-//            graphPane.setCenter(newChart);
-//        } catch (Exception ex) {
-//            Alert alert = new Alert(Alert.AlertType.ERROR);
-//            alert.setTitle("Error");
-//            alert.setHeaderText("Error");
-//            alert.showAndWait();
-//        }
+        Map<Double, Integer> freqs = slv.getFreq();
+        double minX = Collections.min(freqs.keySet());
+        double maxX = Collections.max(freqs.keySet());
+        double minY = Collections.min(freqs.values());
+        double maxY = Collections.max(freqs.values());
+        double xRange = maxX - minX;
+        double yRange = maxY - minY;
+        try {
+            NumberAxis xAxis = new NumberAxis(minX - xRange / 10, maxX + xRange / 10, 1);
+            NumberAxis yAxis = new NumberAxis(minY - yRange / 10, maxY + yRange / 10, 1);
+            xAxis.setLabel("x");
+            yAxis.setLabel("y");
+            LineChart<Number, Number> newChart = new LineChart<>(xAxis, yAxis);
+            newChart.setCreateSymbols(true);
+            graphPane.getChildren().clear();
+            graphPane.getChildren().add(newChart);
+            XYChart.Series<Number, Number> polygon = new XYChart.Series<>();
+            polygon.setName("Frequency polygon");
+            for (double i : freqs.keySet()) {
+                polygon.getData().add(new XYChart.Data<>(i, freqs.get(i)));
+            }
+            newChart.getData().add(polygon);
+            graphPane.getChildren().clear();
+            graphPane.setCenter(newChart);
+        } catch (Exception ex) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Error");
+            alert.showAndWait();
+        }
     }
 
     @FXML private void toLab1(javafx.event.ActionEvent event){
