@@ -1,16 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.*?>
 
 <BorderPane minHeight="626.0" minWidth="845.0" prefHeight="626.0" prefWidth="845.0" stylesheets="style.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="Lab3.Controller">
   <center>
-    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lab 3">
-      <font>
-        <Font size="40.0" />
-      </font>
-    </Text>
+    <Pane prefHeight="200.0" prefWidth="200.0">
+      <children>
+        <ListView id="elemsListView" fx:id="sample1ListView" layoutX="14.0" layoutY="61.0" prefHeight="391.0" prefWidth="75.0" />
+        <ListView id="elemsListView" fx:id="sample2ListView" layoutX="122.0" layoutY="61.0" prefHeight="391.0" prefWidth="75.0" />
+        <Text layoutX="14.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1st sample">
+          <font>
+            <Font size="16.0" fx:id="x1" />
+          </font>
+        </Text>
+        <Text font="$x1" layoutX="119.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2nd sample" />
+        <MenuBar layoutX="0.0" layoutY="0.0">
+          <menus>
+            <Menu mnemonicParsing="false" text="Change lab">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Lab 1" />
+                <MenuItem mnemonicParsing="false" text="Lab 2" />
+                <MenuItem mnemonicParsing="false" text="Lab 4" />
+              </items>
+            </Menu>
+          </menus>
+        </MenuBar>
+        <Button fx:id="solveBtn" font="$x1" layoutX="128.0" layoutY="584.0" mnemonicParsing="false" onAction="#solveClick" prefHeight="34.2813720703125" text="Solve" />
+        <Separator layoutX="216.0" layoutY="14.0" orientation="VERTICAL" prefHeight="598.0" prefWidth="20.0" />
+        <Text font="$x1" layoutX="260.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First variance:" />
+        <Text font="$x1" layoutX="248.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Second variance:" />
+        <Text font="$x1" layoutX="296.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="F =" />
+        <Text font="$x1" layoutX="285.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fcrit =" />
+        <Text font="$x1" layoutX="292.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="k1 =" />
+        <Text font="$x1" layoutX="291.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="k2 =" />
+        <Text font="$x1" layoutX="285.0" layoutY="405.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Verdict:" />
+        <TextField fx:id="var1" layoutX="423.0" layoutY="30.0" prefWidth="118.15625" />
+        <TextField fx:id="var2" layoutX="423.0" layoutY="81.0" prefWidth="118.15625" />
+        <TextField fx:id="f" layoutX="423.0" layoutY="134.0" prefWidth="118.15625" />
+        <TextField fx:id="k1" layoutX="423.0" layoutY="180.0" prefWidth="118.15625" />
+        <TextField fx:id="k2" layoutX="423.0" layoutY="227.0" prefWidth="118.15625" />
+        <TextField fx:id="verdict" layoutX="423.0" layoutY="388.0" prefWidth="134.15625" />
+        <TextField fx:id="fCrit" layoutX="423.0" layoutY="281.0" prefWidth="118.15625" />
+        <TextField fx:id="addElem" layoutX="72.0" layoutY="505.0" prefHeight="24.0" prefWidth="75.0" promptText="Element" />
+        <Button id="Add" fx:id="addBtn1" font="$x1" layoutX="14.0" layoutY="536.0" minHeight="21.28125" mnemonicParsing="false" onAction="#addElem1Click" prefHeight="34.2813720703125" prefWidth="75.0" text="Add" />
+        <Button fx:id="addBtn2" font="$x1" layoutX="122.0" layoutY="536.0" minHeight="21.28125" mnemonicParsing="false" onAction="#addElem2Click" prefHeight="34.2813720703125" prefWidth="75.0" text="Add" />
+        <Button id="Add" fx:id="delBtn1" font="$x1" layoutX="14.0" layoutY="462.0" minHeight="21.28125" mnemonicParsing="false" onAction="#delElem1Click" prefHeight="34.281349999997474" prefWidth="75.0" text="Delete" />
+        <Button id="Add" fx:id="delBtn2" font="$x1" layoutX="122.0" layoutY="462.0" minHeight="21.28125" mnemonicParsing="false" onAction="#delElem2Click" prefHeight="34.2813720703125" prefWidth="75.0" text="Delete" />
+        <TextField id="k2" fx:id="alpha" layoutX="14.0" layoutY="588.0" prefHeight="24.0" prefWidth="95.5078125" promptText="eps" />
+      </children>
+    </Pane>
   </center>
 </BorderPane>

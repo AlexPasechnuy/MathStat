@@ -1,86 +1,59 @@
 package Lab3;
 
-import java.util.Arrays;
+import java.util.*;
+
+import javafx.collections.ObservableList;
+import org.apache.commons.math3.distribution.FDistribution;
 
 public class Solver {
-    private double[] xi = new double[0];
-    private double[] yi = new double[0];
-    private double xm, ym;
-    private double[] x = new double[0];
-    private double[] y = new double[0];
-    private double xSqSum;
-    private double ySqSum;
-    private double xySum;
-    private double sx, sy;
-    private double r;
-    private double squaredR;
-    private double[] b = new double[2];
+    public List<Double> sample1 = new ArrayList<>();
+    public List<Double> sample2 = new ArrayList<>();
+    public double var1, var2, k1, k2, f, alpha, fcrit;
+    public boolean verdict;
 
-    public double[] getRegrParams(){
-        return b;
+    public Solver(List<Double> sample1, List<Double> sample2, double alpha){
+        this.sample1 = sample1;
+        this.sample2 = sample2;
+        this.alpha = alpha;
     }
 
-    public double getCorelCoef(){
-        return r;
-    }
+//    public Solver(ObservableList<Double> sample1, ObservableList<Double> sample2){
+//        this.sample1 = sample1;
+//        this.sample2 = sample2;
+//    }
 
-    public double getDeterCoef(){
-        return squaredR;
-    }
+    public double variance(List<Double> sample){
+        double sum = 0;
 
-    public void add(double x, double y) {
-        Arrays.copyOf(this.xi, this.xi.length + 1);
-        Arrays.copyOf(this.yi, this.yi.length + 1);
-        this.xi[this.xi.length - 1] = x;
-        this.yi[this.yi.length - 1] = y;
-        solve();
-    }
-
-    public Solver(double[] xi, double[] yi) {
-        this.xi = xi;
-        this.yi = yi;
-        solve();
-    }
-
-    private void solve() {
-        xyInit();
-        correlCoefInit();
-        regrParamInit();
-        deterCoefInit();
-    }
-
-    private void xyInit(){
-        double xsum = 0;
-        double ysum = 0;
-        for (int i = 0; i < xi.length; i++) {
-            xsum += xi[i];
-            ysum += yi[i];
+        for(double i : sample){
+            sum += i;
         }
-        xm = xsum / xi.length;
-        ym = ysum / yi.length;
-        x = new double[xi.length];
-        y = new double[yi.length];
-        for (int i = 0; i < xi.length; i++) {
-            x[i] = xi[i] - xm;
-            y[i] = yi[i] - ym;
-            xySum += x[i] * y[i];
-            xSqSum += Math.pow(x[i], 2);
-            ySqSum += Math.pow(y[i], 2);
+
+        double mean = sum/sample.size();
+        sum = 0;
+        for(double i : sample){
+            sum += Math.pow(i-mean,2);
         }
+        return sum/(sample.size() - 1);
     }
 
-    private void correlCoefInit() {
-        r = (xySum)/(Math.sqrt(xSqSum * ySqSum));
-    }
+    public void solve(){
+        var1 = variance(sample1);
+        var2 = variance(sample2);
+        FDistribution fCrit;
+        if(var1 > var2) {
+            f = var1/var2;
+            k1 = sample1.size()-1;
+            k2 = sample2.size()-1;
 
-    private void regrParamInit(){
-        sx = Math.sqrt(xSqSum/(xi.length-1));
-        sy = Math.sqrt(ySqSum/(yi.length-1));
-        b[1] = r * (sy/sx);
-        b[0] = ym - b[1] * xm;
-    }
-
-    private void deterCoefInit(){
-    squaredR = Math.pow((xySum)/(xi.length * sx * sy),2);
+        }
+        else {
+            f = var2/var1;
+            k1 = sample2.size()-1;
+            k2 = sample1.size()-1;
+        }
+        fCrit = new FDistribution(k1,k2);
+        fcrit = fCrit.inverseCumulativeProbability(1-alpha);
+        verdict = f>fcrit;
     }
 }

@@ -42,6 +42,10 @@ public class Solver {
         //median
         Collections.sort(elems);
         median = elems.get(elems.size()/2);
+        if(elems.size()%2 == 0){
+            median += elems.get(elems.size()/2 - 1);
+            median /= 2;
+        }
         //variance
         sum = 0;
         for(double i : elems){

@@ -185,9 +185,13 @@ public class Controller implements Initializable {
         getGraphBounds();
         double xRange = maxX - minX;
         double yRange = maxY - minY;
+        double max = 0;
+        for( TabRow i : tableData){
+            if(i.getX() > max){max = i.getX();}
+        }
         try {
             NumberAxis xAxis = new NumberAxis(minX - xRange / 10, maxX + xRange / 10, 1);
-            NumberAxis yAxis = new NumberAxis(minY - yRange / 10, maxY + yRange / 10, 1);
+            NumberAxis yAxis = new NumberAxis(minY - yRange / 10, Math.max(maxY + yRange / 10,solver.getRegrParams()[0] + solver.getRegrParams()[1] * max), 1);
             xAxis.setLabel("x");
             yAxis.setLabel("y");
             LineChart<Number, Number> newChart = new LineChart<>(xAxis, yAxis);
@@ -225,10 +229,6 @@ public class Controller implements Initializable {
 
     @FXML private void toLab4(javafx.event.ActionEvent event){
         changeScene("../Lab4/Solver.fxml", "Lab 4");
-    }
-
-    @FXML private void toLab5(javafx.event.ActionEvent event){
-        changeScene("../Lab5/Solver.fxml", "Lab 5");
     }
 
     private void changeScene(String path, String title){

@@ -45,7 +45,6 @@
                 <MenuItem mnemonicParsing="false" onAction="#toLab2" text="Lab 2" fx:id="lab2" />
                 <MenuItem mnemonicParsing="false" onAction="#toLab3" text="Lab 3" fx:id="lab3" />
                 <MenuItem mnemonicParsing="false" onAction="#toLab4" text="Lab 4" fx:id="lab4" />
-                <MenuItem mnemonicParsing="false" onAction="#toLab5" text="Lab 5" fx:id="lab5" />
               </items>
             </Menu>
           </menus>

@@ -90,6 +90,12 @@ public class Controller{
         double maxY = Collections.max(freqs.values());
         double xRange = maxX - minX;
         double yRange = maxY - minY;
+        if(xRange == 0){
+            xRange = 10;
+        }
+        if(yRange == 0){
+            yRange = 10;
+        }
         try {
             NumberAxis xAxis = new NumberAxis(minX - xRange / 10, maxX + xRange / 10, 1);
             NumberAxis yAxis = new NumberAxis(minY - yRange / 10, maxY + yRange / 10, 1);
@@ -125,10 +131,6 @@ public class Controller{
 
     @FXML private void toLab4(javafx.event.ActionEvent event){
         changeScene("../Lab4/Solver.fxml", "Lab 4");
-    }
-
-    @FXML private void toLab5(javafx.event.ActionEvent event){
-        changeScene("../Lab5/Solver.fxml", "Lab 5");
     }
 
     private void changeScene(String path, String title){
