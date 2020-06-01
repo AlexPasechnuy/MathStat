@@ -3,31 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="dab941eb-b6bc-4e6c-908c-9157555f1a26" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MathStat.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MathStat.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MathStat/FX.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MathStat/FX.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MathStat/Lab1/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MathStat/Lab1/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MathStat/Lab1/Solver.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MathStat/Lab1/Solver.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MathStat/Lab2/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MathStat/Lab2/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MathStat/Lab2/Solver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MathStat/Lab2/Solver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MathStat/Lab2/Solver.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MathStat/Lab2/Solver.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MathStat/Lab3/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MathStat/Lab3/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MathStat/Lab3/Solver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MathStat/Lab3/Solver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MathStat/Lab3/Solver.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MathStat/Lab3/Solver.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MathStat/Lab5/Controller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MathStat/Lab5/Solver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MathStat/Lab5/Solver.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FX.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lab1/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab1/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lab1/Solver.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab1/Solver.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lab2/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab2/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lab2/Solver.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab2/Solver.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lab2/Solver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab2/Solver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lab3/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab3/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lab3/Solver.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab3/Solver.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Lab3/Solver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab3/Solver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lab5/Controller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lab5/Solver.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lab5/Solver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab4/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab4/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab4/Solver.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab4/Solver.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab4/Solver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab4/Solver.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,41 +17,89 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/src/Lab3/Controller.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="771">
-                    <caret line="97" column="50" selection-start-line="97" selection-start-column="50" selection-end-line="97" selection-end-column="50" />
-                    <folding>
-                      <element signature="imports" expanded="true" />
-                      <element signature="e#3448#3449#0" expanded="true" />
-                      <element signature="e#3507#3508#0" expanded="true" />
-                      <element signature="e#3571#3572#0" expanded="true" />
-                      <element signature="e#3630#3631#0" expanded="true" />
-                      <element signature="e#3694#3695#0" expanded="true" />
-                      <element signature="e#3753#3754#0" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Lab3/Solver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="935">
-              <caret line="55" selection-start-line="55" selection-end-line="55" />
+            <state relative-caret-position="255">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Lab3/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="731">
+              <caret line="43" column="13" lean-forward="true" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Lab2/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="29" column="41" lean-forward="true" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Lab4/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="731">
+              <caret line="99" column="37" lean-forward="true" selection-start-line="99" selection-start-column="37" selection-end-line="99" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Lab4/Solver.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="850">
+              <caret line="50" column="97" selection-start-line="50" selection-start-column="97" selection-end-line="50" selection-end-column="97" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Lab2/Solver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="50" lean-forward="true" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/FX.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,6 +117,18 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Lab4/Solver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="32" column="13" lean-forward="true" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -97,6 +138,11 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>nextS</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -112,25 +158,27 @@
         <option value="$PROJECT_DIR$/src/Test.java" />
         <option value="$PROJECT_DIR$/src/Main/FX.java" />
         <option value="$PROJECT_DIR$/src/Lab3.java" />
-        <option value="$PROJECT_DIR$/src/Lab4/Solver.fxml" />
         <option value="$PROJECT_DIR$/src/Lab5/Solver.fxml" />
         <option value="$PROJECT_DIR$/src/Lab1/style.css" />
         <option value="$PROJECT_DIR$/src/style.css" />
         <option value="$PROJECT_DIR$/src/Lab2/Solver.fxml" />
         <option value="$PROJECT_DIR$/src/Lab1/Solver.fxml" />
         <option value="$PROJECT_DIR$/src/Lab2/Solver.java" />
-        <option value="$PROJECT_DIR$/src/FX.java" />
         <option value="$PROJECT_DIR$/src/Lab3/Solver.fxml" />
         <option value="$PROJECT_DIR$/src/Lab1/Controller.java" />
         <option value="$PROJECT_DIR$/src/Lab2/Controller.java" />
-        <option value="$PROJECT_DIR$/src/Lab3/Solver.java" />
         <option value="$PROJECT_DIR$/src/Lab3/Controller.java" />
+        <option value="$PROJECT_DIR$/src/FX.java" />
+        <option value="$PROJECT_DIR$/src/Lab3/Solver.java" />
+        <option value="$PROJECT_DIR$/src/Lab4/Solver.fxml" />
+        <option value="$PROJECT_DIR$/src/Lab4/Controller.java" />
+        <option value="$PROJECT_DIR$/src/Lab4/Solver.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1004" />
-    <option name="y" value="-557" />
+    <option name="x" value="241" />
+    <option name="y" value="-22" />
     <option name="width" value="1079" />
     <option name="height" value="967" />
   </component>
@@ -142,7 +190,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -171,19 +219,19 @@
               <item name="MathStat" type="b2602c69:ProjectViewProjectNode" />
               <item name="MathStat" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Lab3" type="462c0819:PsiDirectoryNode" />
+              <item name="Lab4" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1590941545110" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1591034635185" />
     <property name="last_opened_file_path" value="D:/Program Files/Java_libs/commons-math3-3.6.1.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -286,17 +334,20 @@
       <workItem from="1590084799190" duration="3569000" />
       <workItem from="1590137421412" duration="5549000" />
       <workItem from="1590163608716" duration="1635000" />
-      <workItem from="1590920325999" duration="9103000" />
+      <workItem from="1590920325999" duration="9298000" />
+      <workItem from="1590953862699" duration="740000" />
+      <workItem from="1591004543199" duration="14106000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75661000" />
+    <option name="totallyTimeSpent" value="90702000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1088" y="-549" width="1096" height="1936" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18822394" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.108208954" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -305,8 +356,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.1241573" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.32921347" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.15531915" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.49468085" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -331,6 +382,22 @@
     <option name="version" value="1" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Lab4/Controller.java</url>
+          <line>91</line>
+          <properties />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Lab4/Controller.java</url>
+          <line>92</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="x[i]" language="JAVA" />
@@ -342,21 +409,11 @@
     <entry file="file://$PROJECT_DIR$/src/anotherForm.fxml" />
     <entry file="file://$PROJECT_DIR$/src/Lab3.java" />
     <entry file="file://$PROJECT_DIR$/src/Lab3/style.css" />
-    <entry file="file://$PROJECT_DIR$/src/Lab4/Solver.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Lab4/style.css" />
     <entry file="file://$PROJECT_DIR$/src/Lab5/Solver.java" />
     <entry file="file://$PROJECT_DIR$/src/Lab5/Controller.java" />
     <entry file="file://$PROJECT_DIR$/src/Lab5/Solver.fxml" />
     <entry file="file://$PROJECT_DIR$/src/Lab5/style.css" />
-    <entry file="file://$PROJECT_DIR$/src/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Lab2/style.css" />
     <entry file="file://$PROJECT_DIR$/src/Lab1/style.css" />
     <entry file="file://$PROJECT_DIR$/src/style2.css" />
@@ -383,35 +440,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lab4/Solver.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Lab1/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3315">
           <caret line="231" column="5" selection-start-line="231" selection-start-column="5" selection-end-line="231" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lab4/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FX.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="36" lean-forward="true" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -428,6 +460,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lab3/Solver.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lab3/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="43" column="13" lean-forward="true" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Lab2/Solver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -438,43 +488,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lab2/Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="79" column="53" selection-start-line="79" selection-start-column="25" selection-end-line="79" selection-end-column="53" />
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lab3/Solver.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
+    <entry file="file://$PROJECT_DIR$/src/FX.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lab3/Solver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lab3/Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/Lab3/Solver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="771">
-          <caret line="97" column="50" selection-start-line="97" selection-start-column="50" selection-end-line="97" selection-end-column="50" />
+        <state relative-caret-position="255">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3448#3449#0" expanded="true" />
-            <element signature="e#3507#3508#0" expanded="true" />
-            <element signature="e#3571#3572#0" expanded="true" />
-            <element signature="e#3630#3631#0" expanded="true" />
-            <element signature="e#3694#3695#0" expanded="true" />
-            <element signature="e#3753#3754#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lab2/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="29" column="41" lean-forward="true" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lab4/Solver.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="50" column="97" selection-start-line="50" selection-start-column="97" selection-end-line="50" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lab4/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="99" column="37" lean-forward="true" selection-start-line="99" selection-start-column="37" selection-end-line="99" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lab4/Solver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="32" column="13" lean-forward="true" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

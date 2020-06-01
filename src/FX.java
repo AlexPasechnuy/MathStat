@@ -10,7 +10,7 @@ public class FX extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            BorderPane root = FXMLLoader.load(getClass().getResource("Lab3/Solver.fxml"));
+            BorderPane root = FXMLLoader.load(getClass().getResource("Lab4/Solver.fxml"));
             Scene scene = new Scene(root, 700, 500);
             primaryStage.setScene(scene);
             primaryStage.setTitle("Solver");

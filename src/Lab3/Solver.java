@@ -17,11 +17,6 @@ public class Solver {
         this.alpha = alpha;
     }
 
-//    public Solver(ObservableList<Double> sample1, ObservableList<Double> sample2){
-//        this.sample1 = sample1;
-//        this.sample2 = sample2;
-//    }
-
     public double variance(List<Double> sample){
         double sum = 0;
 

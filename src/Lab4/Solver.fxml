@@ -1,16 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.*?>
 
-<BorderPane minHeight="626.0" minWidth="845.0" prefHeight="626.0" prefWidth="845.0" stylesheets="style.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="Lab4.Controller">
+<BorderPane minHeight="626.0" minWidth="845.0" prefHeight="626.0" prefWidth="845.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="Lab4.Controller">
   <center>
-    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lab 4">
-      <font>
-        <Font size="40.0" />
-      </font>
-    </Text>
+    <Pane prefHeight="200.0" prefWidth="200.0">
+      <children>
+        <ListView fx:id="groupMeans" layoutX="349.0" layoutY="39.0" prefHeight="173.0" prefWidth="89.0" />
+        <Label layoutX="349.0" layoutY="14.0" text="Group means" />
+        <Text layoutX="25.0" layoutY="422.0" strokeType="OUTSIDE" strokeWidth="0.0" text="F=" />
+        <Text layoutX="25.0" layoutY="450.0" scaleX="1.0" scaleY="0.999993881546745" strokeType="OUTSIDE" strokeWidth="0.0" text="Fcrit=" />
+        <Text layoutX="25.0" layoutY="486.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Verdict:" />
+        <TextField fx:id="f" layoutX="199.0" layoutY="406.0" prefWidth="101.0" />
+        <TextField fx:id="fcrit" layoutX="199.0" layoutY="434.0" prefWidth="101.0" />
+        <TextField fx:id="verdict" layoutX="199.0" layoutY="470.0" prefWidth="200.0" />
+        <Text layoutX="25.0" layoutY="329.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Common mean:" />
+        <TextField fx:id="commonMean" layoutX="199.0" layoutY="313.0" prefWidth="200.0" />
+        <TextArea fx:id="samples" layoutX="14.0" layoutY="39.0" prefHeight="173.0" prefWidth="305.999977929685" wrapText="true" />
+        <Text layoutX="14.0" layoutY="27.0" scaleX="1.0" scaleY="0.9999999999748774" strokeType="OUTSIDE" strokeWidth="0.0" text="Enterd samples:" />
+        <Text layoutX="25.0" layoutY="242.0" scaleX="1.0" scaleY="0.9999923519334313" strokeType="OUTSIDE" strokeWidth="0.0" text="n =" />
+        <TextField id="f" fx:id="n" layoutX="199.0" layoutY="226.0" prefWidth="101.0" />
+        <Text layoutX="25.0" layoutY="271.0" scaleX="1.0" scaleY="0.9999923519334313" strokeType="OUTSIDE" strokeWidth="0.0" text="m =" />
+        <TextField id="f" fx:id="m" layoutX="199.0" layoutY="255.0" prefWidth="101.0" />
+        <Text layoutX="25.0" layoutY="302.0" scaleX="1.0" scaleY="0.9999923519334313" strokeType="OUTSIDE" strokeWidth="0.0" text="Common sum of squares =" />
+        <TextField id="f" fx:id="sst" layoutX="199.0" layoutY="286.0" prefWidth="101.0" />
+        <Text layoutX="25.0" layoutY="362.0" scaleX="1.0" scaleY="0.9999923519334313" strokeType="OUTSIDE" strokeWidth="0.0" text="Sum of group squares =" />
+        <TextField id="f" fx:id="sswg" layoutX="199.0" layoutY="346.0" prefWidth="101.0" />
+        <Text layoutX="25.0" layoutY="392.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Intragroup sum of squares:" />
+        <TextField id="commonMean" fx:id="ssbg" layoutX="199.0" layoutY="376.0" prefWidth="200.0" />
+      </children>
+    </Pane>
   </center>
+  <left>
+    <Pane prefHeight="626.0" prefWidth="223.0">
+      <children>
+        <ListView fx:id="sampleTable" layoutX="14.0" layoutY="24.0" prefHeight="378.0" prefWidth="116.0" />
+        <TextField fx:id="addElem" layoutX="14.0" layoutY="412.0" prefWidth="116.0" promptText="Element" />
+        <TextField fx:id="alpha" layoutX="14.0" layoutY="546.0" prefWidth="116.0" promptText="Alpha" />
+        <Button layoutX="38.0" layoutY="441.0" mnemonicParsing="false" onAction="#addElemClick" prefWidth="69.0" text="Add" />
+        <Button layoutX="45.0" layoutY="476.0" mnemonicParsing="false" onAction="#delElemClick" text="Delete" />
+        <Button layoutX="38.0" layoutY="591.0" mnemonicParsing="false" onAction="#solveClick" prefWidth="69.0" text="Solve" />
+        <Label layoutX="29.0" layoutY="4.0" text="Sample table" />
+        <Button layoutX="22.0" layoutY="511.0" mnemonicParsing="false" onAction="#nextSampleClick" prefWidth="101.0" text="Next sample" />
+      </children>
+    </Pane>
+  </left>
 </BorderPane>
