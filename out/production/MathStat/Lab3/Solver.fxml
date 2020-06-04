@@ -25,9 +25,9 @@
           <menus>
             <Menu mnemonicParsing="false" text="Change lab">
               <items>
-                <MenuItem mnemonicParsing="false" text="Lab 1" />
-                <MenuItem mnemonicParsing="false" text="Lab 2" />
-                <MenuItem mnemonicParsing="false" text="Lab 4" />
+                <MenuItem mnemonicParsing="false" onAction="#toLab1" text="Lab 1" />
+                <MenuItem mnemonicParsing="false" onAction="#toLab2" text="Lab 2" />
+                <MenuItem mnemonicParsing="false" onAction="#toLab4" text="Lab 4" />
               </items>
             </Menu>
           </menus>

@@ -1,6 +1,5 @@
 package Lab3;
 
-import Lab3.Solver;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -14,7 +13,8 @@ import javafx.scene.control.TextField;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
-import java.util.Collections;
+import java.text.DecimalFormat;
+
 
 public class Controller{
     ObservableList<Double> elems1 = FXCollections.observableArrayList();
@@ -36,6 +36,8 @@ public class Controller{
             sample1ListView.setItems(elems1);
         } catch (NumberFormatException ex) {
             showError("X or Y are not numbers!");
+        }finally {
+            addElem.clear();
         }
     }
 
@@ -49,6 +51,8 @@ public class Controller{
             sample2ListView.setItems(elems2);
         } catch (NumberFormatException ex) {
             showError("X or Y are not numbers!");
+        }finally{
+            addElem.clear();
         }
     }
 
@@ -79,19 +83,20 @@ public class Controller{
     }
 
     @FXML private void solveClick(javafx.event.ActionEvent event){
+
             if (elems1.isEmpty() || elems2.isEmpty()) {
                 showError("There is nothing to solve!!!");
                 return;
             }
+            DecimalFormat df = new DecimalFormat("###.#####");
             slv = new Solver(elems1, elems2, Double.parseDouble(alpha.getText()));
             slv.solve();
-            var1.setText(String.valueOf(slv.var1));
-            var2.setText(String.valueOf(slv.var2));
-            f.setText(String.valueOf(slv.f));
-            k1.setText(String.valueOf(slv.k1));
-            k2.setText(String.valueOf(slv.k2));
-            fCrit.setText(String.valueOf(slv.fcrit));
-            verdict.setText(String.valueOf(slv.verdict));
+            var1.setText(String.valueOf(df.format(slv.var1)));
+            var2.setText(String.valueOf(df.format(slv.var2)));
+            f.setText(String.valueOf(df.format(slv.f)));
+            k1.setText(String.valueOf(df.format(slv.k1)));
+            k2.setText(String.valueOf(df.format(slv.k2)));
+            fCrit.setText(String.valueOf(df.format(slv.fcrit)));
             if(slv.verdict == true) {
                 verdict.setText("Difference is significant");
             }else{
@@ -103,13 +108,11 @@ public class Controller{
         changeScene("../Lab1/Solver.fxml", "Lab 1");
     }
 
-    @FXML private void toLab3(javafx.event.ActionEvent event){
-        changeScene("../Lab3/Solver.fxml", "Lab 3");
+    @FXML private void toLab2(javafx.event.ActionEvent event){
+        changeScene("../Lab2/Solver.fxml", "Lab 2");
     }
 
-    @FXML private void toLab4(javafx.event.ActionEvent event){
-        changeScene("../Lab4/Solver.fxml", "Lab 4");
-    }
+    @FXML private void toLab4(javafx.event.ActionEvent event) { changeScene("../Lab4/Solver.fxml", "Lab 4"); }
 
     private void changeScene(String path, String title){
         try {

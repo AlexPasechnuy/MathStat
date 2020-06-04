@@ -10,6 +10,7 @@ import javafx.scene.control.*;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -37,6 +38,8 @@ public class Controller {
             sampleTable.setItems(elems);
         } catch (NumberFormatException ex) {
             showError("X or Y are not numbers!");
+        }finally {
+            addElem.clear();
         }
     }
 
@@ -70,16 +73,17 @@ public class Controller {
             }
             smpls += "\n";
         }
+        DecimalFormat df = new DecimalFormat("###.#####");
         groupMeans.setItems(FXCollections.observableArrayList(slv.means));
         samples.setText(smpls);
-        n.setText(String.valueOf(slv.n));
-        m.setText(String.valueOf(slv.m));
-        sst.setText(String.valueOf(slv.sst));
-        commonMean.setText(String.valueOf(slv.mean));
-        sswg.setText(String.valueOf(slv.sswg));
-        ssbg.setText(String.valueOf(slv.ssbg));
-        f.setText(String.valueOf(slv.f));
-        fcrit.setText(String.valueOf(slv.fcrit));
+        n.setText(String.valueOf(df.format(slv.n)));
+        m.setText(String.valueOf(df.format(slv.m)));
+        sst.setText(String.valueOf(df.format(slv.sst)));
+        commonMean.setText(String.valueOf(df.format(slv.mean)));
+        sswg.setText(String.valueOf(df.format(slv.sswg)));
+        ssbg.setText(String.valueOf(df.format(slv.ssbg)));
+        f.setText(String.valueOf(df.format(slv.f)));
+        fcrit.setText(String.valueOf(df.format(slv.fcrit)));
         if(slv.verdict == true) {
             verdict.setText("Difference is significant");
         }else{
@@ -104,5 +108,34 @@ public class Controller {
         alert.setTitle("Error");
         alert.setHeaderText(message);
         alert.showAndWait();
+    }
+
+    @FXML private void toLab1(javafx.event.ActionEvent event){
+        changeScene("../Lab1/Solver.fxml", "Lab 1");
+    }
+
+    @FXML private void toLab2(javafx.event.ActionEvent event){
+        changeScene("../Lab2/Solver.fxml", "Lab 2");
+    }
+
+    @FXML private void toLab3(javafx.event.ActionEvent event){
+        changeScene("../Lab3/Solver.fxml", "Lab 3");
+    }
+
+    private void changeScene(String path, String title){
+        try {
+            Stage stage = (Stage) sampleTable.getScene().getWindow();
+            stage.close();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(path));
+            Parent root1 = (Parent) fxmlLoader.load();
+            stage = new Stage();
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setTitle(title);
+            stage.setScene(new Scene(root1));
+            stage.show();
+            stage.setMaximized(true);
+        }catch(Exception ex){
+            ex.printStackTrace();
+        }
     }
 }
