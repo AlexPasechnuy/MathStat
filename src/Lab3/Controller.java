@@ -116,7 +116,7 @@ public class Controller{
 
     private void changeScene(String path, String title){
         try {
-            Stage stage = (Stage) btn.getScene().getWindow();
+            Stage stage = (Stage) solveBtn.getScene().getWindow();
             stage.close();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(path));
             Parent root1 = (Parent) fxmlLoader.load();
